@@ -1,0 +1,11 @@
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: hok-operator
+subjects:
+- kind: ServiceAccount
+  name: hok-operator
+roleRef:
+  kind: ClusterRole
+  name: hok-operator
+  apiGroup: rbac.authorization.k8s.io

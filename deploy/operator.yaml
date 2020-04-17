@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hok-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: hok-operator
+  template:
+    metadata:
+      labels:
+        name: hok-operator
+    spec:
+      serviceAccountName: hok-operator
+      containers:
+        - name: hok-operator
+          image: hokstack/hok-operator:v1.2.0
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom: ""
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              value: "hok-operator"

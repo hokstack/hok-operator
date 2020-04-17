@@ -1,0 +1,14 @@
+NOTES:
+
+Thank you for installing HokStack!
+
+Now that you have deployed HoK, you should look over the docs on 
+accessing HoK with Kubernetes available here:
+
+https://hokstack.io
+
+
+If your release is named hok. To learn more about the release, try:
+
+  $ helm status hok
+  $ helm get hok
