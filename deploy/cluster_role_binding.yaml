@@ -5,6 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: hok-operator
+  namespace: default
 roleRef:
   kind: ClusterRole
   name: hok-operator

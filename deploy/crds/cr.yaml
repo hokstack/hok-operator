@@ -2,6 +2,7 @@ apiVersion: charts.helm.k8s.io/v1alpha1
 kind: Hokstack
 metadata:
   name: example-hokstack
+  namespace: team1
 spec:
   ambariserver:
     componentName: ambari
@@ -118,7 +119,7 @@ spec:
       runAsUser: 0
   metacontroller:
     crds:
-      create: true
+      create: false
     enabled: true
     image:
       repository: metacontroller/metacontroller
@@ -150,5 +151,5 @@ spec:
         add:
         - SYS_ADMIN
       runAsUser: 0
-  teamname: hadoop
+  teamname: team1
   

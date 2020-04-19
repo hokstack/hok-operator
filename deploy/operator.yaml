@@ -16,10 +16,10 @@ spec:
       containers:
         - name: hok-operator
           image: hokstack/hok-operator:v1.2.0
-          imagePullPolicy: Always
+          imagePullPolicy: IfNotPresent
           env:
             - name: WATCH_NAMESPACE
-              valueFrom: ""
+              value: ""
             - name: POD_NAME
               valueFrom:
                 fieldRef:
