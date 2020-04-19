@@ -16,7 +16,7 @@ spec:
       containers:
         - name: hok-operator
           image: hokstack/hok-operator:v1.2.0
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           env:
             - name: WATCH_NAMESPACE
               value: ""

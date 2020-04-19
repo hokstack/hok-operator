@@ -9,7 +9,7 @@ spec:
     listKind: HokstackList
     plural: hokstacks
     singular: hokstack
-  scope: Cluster
+  scope: Namespaced
   subresources:
     status: {}
   versions:
