@@ -4,7 +4,7 @@
 
 Apply the CRD
 ```sh
-$ cd deploy
+$ cd deploy/crds
 $ kubectl apply -f crd.yaml
 ```
 
